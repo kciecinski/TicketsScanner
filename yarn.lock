@@ -523,7 +523,7 @@
     "@babel/helper-simple-access" "^7.12.1"
     babel-plugin-dynamic-import-node "^2.3.3"
 
-"@babel/plugin-transform-object-assign@^7.0.0":
+"@babel/plugin-transform-object-assign@^7.0.0", "@babel/plugin-transform-object-assign@^7.10.4":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.12.1.tgz#9102b06625f60a5443cc292d32b565373665e1e4"
   integrity sha512-geUHn4XwHznRAFiuROTy0Hr7bKbpijJCmr1Svt/VNGhpxmp0OrdxURNpWbOAf94nUbL+xj6gbxRVPHWIbRpRoA==
@@ -664,7 +664,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -1707,6 +1707,13 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
+axios@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.0.tgz#26df088803a2350dff2c27f96fef99fe49442aca"
+  integrity sha512-fmkJBknJKoZwem3/IKSSLpkdNXZeBu5Q7GA/aRsr2btgrptmSCxi2oFjZHqGdK9DoTil9PIHlPIZw2EcRJXRvw==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 babel-eslint@10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
@@ -2599,6 +2606,11 @@ domutils@^2.4.3:
     domelementtype "^2.0.1"
     domhandler "^4.0.0"
 
+dotenv@^8.0.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -3250,6 +3262,11 @@ flatted@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
   integrity sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
+
+follow-redirects@^1.10.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
+  integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -4753,6 +4770,14 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+match-sorter@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-6.0.2.tgz#91bbab14c28a87f4a67755b7a194c0d11dedc080"
+  integrity sha512-SDRLNlWof9GnAUEyhKP0O5525MMGXUGt+ep4MrrqQ2StAh3zjvICVZseiwg7Zijn3GazpJDiwuRr/mFDHd92NQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    remove-accents "0.4.2"
+
 mdn-data@2.0.14:
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
@@ -5855,6 +5880,13 @@ react-native-camera@^3.40.0:
   dependencies:
     prop-types "^15.6.2"
 
+react-native-dotenv@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-dotenv/-/react-native-dotenv-2.4.3.tgz#1d04043ecbba185dc1ddc01fd22b5aec162b891c"
+  integrity sha512-SsJZGAIYVsqdddgGh2P95q0wlrolh7oFDqynXdIK/JBRSuRo/8qbOVgzfVvB3d7zs+PgexE5UQiMOgZ6kHdpdQ==
+  dependencies:
+    dotenv "^8.0.0"
+
 react-native-gesture-handler@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.9.0.tgz#e441b1c0277c3fd4ca3e5c58fdd681e2f0ceddf0"
@@ -5890,12 +5922,14 @@ react-native-qrcode-scanner@^1.6.0:
     prop-types "^15.5.10"
     react-native-permissions "^2.0.2"
 
-react-native-reanimated@^1.13.2:
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.13.2.tgz#1ae5457b24b4913d173a5a064bb28eae7783d293"
-  integrity sha512-O+WhgxSjOIzcVdAAvx+h2DY331Ek1knKlaq+jsNLpC1fhRy9XTdOObovgob/aF2ve9uJfPEawCx8381g/tUJZQ==
+react-native-reanimated@2.0.0:
+  version "2.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.0.0-rc.1.tgz#51be1ca5bfa7df0d75a2878792612032bff792ae"
+  integrity sha512-97xo5N4IHNg8hwJ/sTrp7gVuS85AUH3QEjKEtkwZxkH6uijB1OViyNlly6VAIE/cZIaDEPcY7tmDYJakUUHIGA==
   dependencies:
-    fbjs "^1.0.0"
+    "@babel/plugin-transform-object-assign" "^7.10.4"
+    fbjs "^3.0.0"
+    string-hash-64 "^1.0.3"
 
 react-native-safe-area-context@^3.1.9:
   version "3.1.9"
@@ -5947,6 +5981,14 @@ react-native@0.63.3:
     stacktrace-parser "^0.1.3"
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
+
+react-query@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.3.4.tgz#c187849455f4a7312a01769d94c399577ec3820e"
+  integrity sha512-+HyDOjKpo/wlJW1Z5xvFfRzViCeqHXHhhBLmtfUON/SHgoXOAHj5bOPVg4f++6ymaIFSWxAyw3y9CR2jrB0IKQ==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    match-sorter "^6.0.2"
 
 react-refresh@^0.4.0:
   version "0.4.3"
@@ -6082,6 +6124,11 @@ regjsparser@^0.6.4:
   integrity sha512-64O87/dPDgfk8/RQqC4gkZoGyyWFIEUTTh80CU6CWuK5vkCGyekIx+oKcEIYtP/RAxSQltCZHCNu/mdd7fqlJw==
   dependencies:
     jsesc "~0.5.0"
+
+remove-accents@0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
+  integrity sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -6676,6 +6723,11 @@ strict-uri-encode@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
   integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
+
+string-hash-64@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/string-hash-64/-/string-hash-64-1.0.3.tgz#0deb56df58678640db5c479ccbbb597aaa0de322"
+  integrity sha512-D5OKWKvDhyVWWn2x5Y9b+37NUllks34q1dCDhk/vYcso9fmhs+Tl3KR/gE4v5UNj2UA35cnX4KdVVGkG1deKqw==
 
 string-length@^3.1.0:
   version "3.1.0"

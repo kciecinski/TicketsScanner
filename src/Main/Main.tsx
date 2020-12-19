@@ -6,9 +6,9 @@ import MainTabNavigator from '../Navigator/MainTabNavigator';
 
 const Main = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <MainTabNavigator />
-    </SafeAreaView>
+    // <SafeAreaView style={styles.container}>
+    <MainTabNavigator />
+    // </SafeAreaView>
   );
 };
 

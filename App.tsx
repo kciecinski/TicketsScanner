@@ -9,10 +9,17 @@
  */
 
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Main from './src/Main/Main';
 const App = () => {
-  return <Main />;
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Main />
+    </QueryClientProvider>
+  );
 };
 
 export default App;
