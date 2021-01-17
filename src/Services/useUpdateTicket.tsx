@@ -3,30 +3,16 @@ import DropdownAlert from 'react-native-dropdownalert';
 import { useMutation } from 'react-query';
 import ApiService from './ApiService';
 
-const useUpdateTicket = (dropDown: DropdownAlert | null) => {
-  const mutation = useMutation((ticketId: number) => setTicketActive(ticketId));
-  const mutationDisactivate = useMutation((ticketId: number) =>
-    setTicketDisactive(ticketId),
+const useUpdateTicket = (dropDown: DropdownAlert | null, active: boolean) => {
+  const mutation = useMutation((ticketId: number) =>
+    setTicketActive(ticketId, { active }),
   );
 
   const setTicketActive = useCallback(
-    async (ticketId: number) =>
+    async (ticketId: number, params: Partial<ITicketRestApiResponse>) =>
       await ApiService.patch<ITicketRestApiResponse>(
         `tickets/${ticketId}.json`,
-        {
-          active: true,
-        },
-      ),
-    [],
-  );
-
-  const setTicketDisactive = useCallback(
-    async (ticketId: number) =>
-      await ApiService.patch<ITicketRestApiResponse>(
-        `tickets/${ticketId}.json`,
-        {
-          active: false,
-        },
+        params,
       ),
     [],
   );
@@ -49,7 +35,7 @@ const useUpdateTicket = (dropDown: DropdownAlert | null) => {
     }
   }, [dropDown, mutation.error, mutation.isError, mutation.isSuccess]);
 
-  return { activate: mutation, disActivate: mutationDisactivate };
+  return mutation;
 };
 
 export default useUpdateTicket;

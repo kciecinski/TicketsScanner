@@ -21,7 +21,8 @@ const TicketsModal = ({
   ticket,
   dropDown,
 }: IModalProps) => {
-  const { activate, disActivate } = useUpdateTicket(dropDown);
+  const activate = useUpdateTicket(dropDown, true);
+  const deactivate = useUpdateTicket(dropDown, false);
 
   const onConfirm = useCallback(() => {
     setModalVisible(false);
@@ -29,10 +30,10 @@ const TicketsModal = ({
     activate.mutate(ticket.id);
   }, [activate, setModalVisible, ticket.id]);
 
-  const onDisactivate = useCallback(() => {
+  const onDeactivated = useCallback(() => {
     setModalVisible(false);
-    disActivate.mutate(ticket.id);
-  }, [disActivate, setModalVisible, ticket.id]);
+    deactivate.mutate(ticket.id);
+  }, [deactivate, setModalVisible, ticket.id]);
 
   return (
     <Modal
@@ -55,7 +56,7 @@ const TicketsModal = ({
             />
             <Text style={styles.buttonText}>Activate</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={onDisactivate}>
+          <TouchableOpacity onPress={onDeactivated}>
             <FontAwesomeIcon
               style={styles.icon}
               color={Colors.ERROR}

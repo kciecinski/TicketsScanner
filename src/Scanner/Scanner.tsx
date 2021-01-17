@@ -18,7 +18,7 @@ const Scanner = () => {
 
   const [ticketVisible, setTicketVisible] = useState(false);
 
-  const { activate: mutation } = useUpdateTicket(dropDown.current);
+  const mutation = useUpdateTicket(dropDown.current, true);
 
   const onSuccess = (e: BarCodeReadEvent) => {
     try {

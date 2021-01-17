@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MainTabNavigator from '../Navigator/MainTabNavigator';
+import SplashScreen from 'react-native-splash-screen';
 
 const Main = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  });
   return (
-    // <SafeAreaView style={styles.container}>
     <>
       <MainTabNavigator />
     </>
-    // </SafeAreaView>
   );
 };
 
