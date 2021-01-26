@@ -10,6 +10,9 @@ target 'TicketsScanner' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
+  permissions_path = '../node_modules/react-native-permissions/ios'  
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
   target 'TicketsScannerTests' do
     inherit! :complete
     # Pods for testing

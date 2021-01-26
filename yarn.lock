@@ -5934,13 +5934,13 @@ react-native-qrcode-scanner@^1.6.0:
     prop-types "^15.5.10"
     react-native-permissions "^2.0.2"
 
-react-native-reanimated@2.0.0-alpha.9.2:
-  version "2.0.0-alpha.9.2"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.0.0-alpha.9.2.tgz#97ac3ced7f7e080d4a6464e14e1953f3583bb228"
-  integrity sha512-JaxvSxpgkF4mjtC/3z4SFIbalTI8/yQpJJdvUA0IDOy3P3/EdRc9FlAsECV/oTkMvHEDOyWAfc9J07UyX/oymg==
+react-native-reanimated@2.0.0-alpha.6:
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.0.0-alpha.6.tgz#d3b55127e8202a12b9073c97086dfe85283c9e08"
+  integrity sha512-VlclQ4dlHM7e8F8HBgwqUQTfCNK3k+h13aL/9k/JMqx4CrUAWe2RYdsRWxurV3YrK0RYdjpM4AvmxqGvJKWuWA==
   dependencies:
     "@babel/plugin-transform-object-assign" "^7.10.4"
-    fbjs "^3.0.0"
+    fbjs "^1.0.0"
     string-hash-64 "^1.0.3"
 
 react-native-safe-area-context@^3.1.9:
