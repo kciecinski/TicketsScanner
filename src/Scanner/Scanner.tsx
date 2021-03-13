@@ -49,7 +49,7 @@ const Scanner = () => {
   }, [mutation, mutation.isError, mutation.isSuccess]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="Scanner">
       <QRCodeScanner
         onRead={onSuccess}
         reactivate={true}

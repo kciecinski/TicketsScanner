@@ -14,10 +14,12 @@ import { IProps } from './Ticket.types';
 
 const Ticket = ({ ticket }: IProps) => {
   return (
-    <View style={style.card}>
+    <View style={style.card} testID={`TicketItem${ticket.id}`}>
       <View style={style.textRow}>
         <FontAwesomeIcon icon={faIdCard} size={32} />
-        <Text style={style.infoText}>Ticket #{ticket.id}</Text>
+        <Text style={style.infoText} testID={`ticketId${ticket.id}`}>
+          Ticket #{ticket.id}
+        </Text>
       </View>
       <View style={style.textRow}>
         <FontAwesomeIcon icon={faUserAstronaut} size={32} />
@@ -39,7 +41,7 @@ const Ticket = ({ ticket }: IProps) => {
       </View>
       <View style={style.textRow}>
         <FontAwesomeIcon icon={faCheckCircle} size={32} />
-        <Text style={style.infoText}>
+        <Text style={style.infoText} testID={`TicketItem${ticket.id}Aprroved`}>
           {ticket.active ? 'Approved' : 'Not Approved'}
         </Text>
       </View>

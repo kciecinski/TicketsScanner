@@ -27,7 +27,7 @@ const LoadingScreen = () => {
   }, [rotation.value, translateY.value]);
 
   return (
-    <View style={style.loadingConteiner}>
+    <View testID="loadingBall" style={style.loadingConteiner}>
       <AnimatedLoadingBall style={stylez} />
       <Text style={style.loadingText}>Loading</Text>
     </View>

@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import React, { useCallback, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
-import ApiService from '../Services/ApiService';
 import { Colors } from '../Config/Colors';
 import { moderateScale } from 'react-native-size-matters';
 import Ticket from './components/Ticket';
@@ -20,13 +19,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import TicketsModal from './components/TicketsModal';
 import DropdownAlert from 'react-native-dropdownalert';
 import { useRef } from 'react';
-
+import { getTickets } from './ticketList.service';
 const TicketsList = () => {
-  const getTickets = useCallback(
-    async () => await ApiService.get<ITicketRestApiResponse[]>('tickets.json'),
-    [],
-  );
-
   const [searchText, setSearchText] = useState('');
   const { data, isLoading, error, refetch } = useQuery('tickets', getTickets);
   let dropDown = useRef<DropdownAlert | null>(null);
@@ -73,12 +67,13 @@ const TicketsList = () => {
   }
 
   return (
-    <View style={style.container}>
+    <View style={style.container} testID="TicketsList">
       <ScrollView
         scrollEventThrottle={16}
         refreshControl={
           <RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} />
-        }>
+        }
+        testID="ticketList">
         <View style={style.searchContainer}>
           <Text style={style.headerText}>Tickets List</Text>
           <TouchableOpacity style={style.searchButton}>
@@ -96,6 +91,7 @@ const TicketsList = () => {
             .sort((d, d2) => d.id - d2.id)
             .map((ticket) => (
               <TouchableOpacity
+                testID={`ticketPressable${ticket.id}`}
                 onPress={() => {
                   setModalTicket(ticket);
                   setModalVisible(true);
@@ -117,7 +113,10 @@ const TicketsList = () => {
           dropDown={dropDown.current}
         />
       )}
-      <DropdownAlert ref={(ref) => (dropDown.current = ref)} />
+      <DropdownAlert
+        testID="dropdown"
+        ref={(ref) => (dropDown.current = ref)}
+      />
     </View>
   );
 };

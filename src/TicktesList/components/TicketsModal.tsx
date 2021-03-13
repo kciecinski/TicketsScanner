@@ -43,11 +43,13 @@ const TicketsModal = ({
       onRequestClose={() => {
         setModalVisible(false);
       }}>
-      <View style={styles.container}>
+      <View style={styles.container} testID={`modalTicket${ticket.id}`}>
         <Text style={styles.headerText}>Edit Ticket</Text>
         <Ticket ticket={ticket} />
         <View style={styles.buttonsContainer}>
-          <TouchableOpacity onPress={onConfirm}>
+          <TouchableOpacity
+            testID={`ticketActivate${ticket.id}`}
+            onPress={onConfirm}>
             <FontAwesomeIcon
               style={styles.icon}
               color={Colors.SUCCESS}
@@ -56,7 +58,9 @@ const TicketsModal = ({
             />
             <Text style={styles.buttonText}>Activate</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={onDeactivated}>
+          <TouchableOpacity
+            testID={`ticketDisactivate${ticket.id}`}
+            onPress={onDeactivated}>
             <FontAwesomeIcon
               style={styles.icon}
               color={Colors.ERROR}

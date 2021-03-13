@@ -20,6 +20,7 @@ const MainTabNavigator = () => {
             component={TicketsList}
             options={{
               tabBarIcon: () => <FontAwesomeIcon icon={faTicketAlt} />,
+              tabBarTestID: 'TicketsNav',
             }}
           />
           <Tab.Screen
@@ -27,6 +28,7 @@ const MainTabNavigator = () => {
             component={Scanner}
             options={{
               tabBarIcon: () => <FontAwesomeIcon icon={faBarcode} />,
+              tabBarTestID: 'ScanTicetsNav',
             }}
           />
         </Tab.Navigator>
